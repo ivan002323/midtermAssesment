@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<title>Home</title>
+<link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <form class="container2" action="/login2" method="POST">
+        <h1>Log In</h1>
+        <label for="orig">Username:</label><br>
+        <input type="text" class="input" id="user" name="user" placeholder="enter your username here"><br><br>
+        <label for="dest">Password:</label><br>
+        <input type="text" class="input" id="pass" name="pass" placeholder="enter your password here"><br><br>
+        <a href="/login">
+            <button type="submit" class="btn"><span>Submit</span></button></a>
+        <a href="/welcome">
+            <button type="button" class="btn"><span>Back?</span></button></a>
+        {% if logSuc or invalCred or invalMet %}
+        <br>
+        <p>{{logSuc}}</p>
+        <p>{{invalCred}}</p>
+        <p>{{invalMet}}</p>
+        {% endif %}
+    </form>   
+</body>
+</html>

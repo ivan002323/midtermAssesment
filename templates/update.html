@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<title>Update</title>
+<link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <div class="container4" >
+        <form action="/update2" method="POST">
+            <h1>Account Change Password</h1>
+            <h3>Update {{userOut}} Account Password</h3>
+                <label for="user">Account Name:</label>
+                <input type="text" class="input" id="user" name="user" placeholder="Re-enter Username"><br><br>
+                <label for="pass">Account Password:</label>
+                <input type="password" class="input" id="pass" name="pass" placeholder="Enter New Password"><br><br>
+                <a href="/update2">
+                    <button type="submit" class="btn"><span>Update Password</span></button></a>
+                </form>   
+        <a href="/home">
+            <button class="btn"><span>Back?</span></button></a>
+    </div>
+</body>
+</html>
